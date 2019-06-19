@@ -1,10 +1,10 @@
 #include <iostream>
 
-void Swap(int* a, int* b)
+void Swap(int& a, int& b)
 {
-	int t = *a;
-	*a = *b;
-	*b = t;
+	int t = a;
+	a = b;
+	b = t;
 }
 
 int Part(int *arr, int low, int high)
@@ -18,10 +18,10 @@ int Part(int *arr, int low, int high)
 		if (arr[j] <= k)
 		{
 			i++;  
-			Swap(&arr[i], &arr[j]);
+			Swap(arr[i], arr[j]);
 		}
 	}
-	Swap(&arr[i + 1], &arr[high]);
+	Swap(arr[i + 1], arr[high]);
 	return (i + 1);
 }
 
