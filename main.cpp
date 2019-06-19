@@ -56,5 +56,4 @@ int main()
 	QuickSort(arr, 0, n - 1);
 	PrintArr(arr, n);
 
-	system("pause");
 }
